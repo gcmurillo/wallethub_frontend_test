@@ -29,7 +29,6 @@ export class UserNameComponent {
     @HostListener('document:click', ['$event'])
     clickout(e) {
         if (!this.eRef.nativeElement.contains(e.target)) {
-            console.log("OUTSIDE");
             if (this.first_name.replace(/\s/g, "") != "" && this.last_name.replace(/\s/g, "") != "") {
                 this.username = this.first_name.toLocaleLowerCase() + "_" + this.last_name.toLocaleLowerCase() + "_" + this.getRandomInt(1, 9);
             }
