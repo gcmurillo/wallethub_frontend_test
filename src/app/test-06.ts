@@ -49,7 +49,20 @@ At https://wallethub.com <b>bolded text</b>`;
     review_content = "";
 
     ngOnInit() {
-        this.review_content = this.review_input;
+        this.review_content = this.processInput(this.review_input);
+    }
+
+    replaceURLWithHTMLLinks(text) {
+        var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i;
+        return text.replace(exp, "<a href='$1'>$1</a>");
+    }
+
+    processInput(str: string) {
+        var out = "";
+        out = str.replace(/(?:\r\n|\r|\n)/g, '<br>');
+        out = out.replace(/\s\s/g, '&nbsp;&nbsp;');
+        out = this.replaceURLWithHTMLLinks(out);
+        return out;
     }
 
 }
