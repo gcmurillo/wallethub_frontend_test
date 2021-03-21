@@ -1,0 +1,167 @@
+
+.navbar {
+    width: 100%;
+    position: inherit;
+    text-align: center;
+    background-color: white;
+    padding: 0.1;
+}
+
+.navbar-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.navbar-list li {
+    list-style: none;
+    float: left;
+}
+
+.navbar-item {
+    text-align: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'Proxima Nova';
+}
+
+.top {
+    background-color: #23123a;
+    padding-top: 5%;
+}
+
+#title {
+    color: white;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    font-size: 5em;
+    padding: 0.5em 0.5em 0 0.5em;
+}
+
+div#top-image {
+    text-align: center;
+}
+
+img#top-image {
+    width: 25em;
+}
+
+.down {
+    background-color: #f1f5f8;
+    padding: 3em;
+}
+
+#title-down {
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    font-size: 2em;
+    padding-bottom: 1em;
+}
+
+#info-box {
+    background-color: white;
+    padding: 2em 3em 2em 3em;
+    font-family: 'Proxima Nova';
+    font-size: 1.3em;
+}
+
+#reviews {
+    float: right;
+    font-size: 0.7em;
+}
+
+.stars {
+    color: #5bd8d1;
+}
+
+#card-info {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+#card-image {
+    height: 5em;
+}
+
+#card-approval {
+    float: right;
+    text-align: center;
+    margin-left: 1em;
+    font-size: 0.8em;
+}
+
+#card-text {
+    float: right;
+    font-size: 0.8em;
+}
+
+#card-section {
+    display: inline-flex;
+    width: 25%;
+}
+
+#very-good {
+    background-color: #5bd8d1;
+    color: white;
+    border-radius: 2em;
+    padding: 5%;
+}
+
+#button-apply {
+    width: 30%;
+    color: white;
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+    background-color: #fa6e3d;
+    border-radius: 0.5em;
+    margin: 1em 0 1em 0;
+    font-size: 0.8em;
+}
+
+a {
+    text-decoration: none;
+}
+
+#details {
+    font-size: 0.8em;
+}
+
+@media (max-width: 767px) {
+    .hidden-mobile {
+        display: none;
+    }
+    .show-mobile {
+        display: block;
+    }
+    #top-image {
+        width: 20em !important;
+        text-align: center !important;
+    }
+
+    #title {
+        font-size: 4em !important;
+    }
+
+    #title-down {
+        font-size: 1.2em !important;
+    }
+
+    .down {
+        padding: 1em !important;
+    }
+
+    #info-box {
+        padding: 1em !important;
+    }
+    #card-info {
+        display: flow-root !important;
+    }
+    #button-apply {
+        width: auto !important;
+    }
+    #details {
+        font-size: 0.8em;
+    }
+}
